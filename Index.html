@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quete-Box</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Fredoka:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quete-box">
+         <h1>Quote of The Day</h1>
+         <blockquote id="quote">Laoding...</blockquote>
+          <br>  
+         <span id="auther">Author</span>
+         <div>
+         <button class=".btn" onclick="getquote(apl_url)">Get Quote</button>
+         <button class=".btn" onclick="twite()"><img src="Twitter-Logо.png" width="20px" height="20px">Tweet</button>
+         </div>
+        
+          
+         
+
+    </div>
+    <script>
+        const quote = document.getElementById("quote");
+        const auther = document.getElementById("auther");
+
+        const apl_url="https://api.quotable.io/random";
+        async function getquote(url){
+
+            const responce = await fetch(url);
+            var data = await responce.json();
+            quote.innerHTML=data.content;
+            auther.innerHTML=data.author;
+            
+
+
+        }
+        function twite(){
+            window.open("https://twitter.com/intent/tweet?text=Hello%20world")
+        }
+        getquote(apl_url);
+
+    </script>
+</body>
+</html>

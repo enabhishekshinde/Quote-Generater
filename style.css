@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Fredoka", sans-serif;
+    background: #bbc6fc;
+}
+.quete-box{
+    position: absolute;
+    background: #fff;
+    text-align: center;
+    top:25%;
+    left:25%;
+    right: 25%;
+    height:350px;
+    width:800px;
+    max-height: 600px;
+    max-width: 1000px;
+    box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
+    border-radius: 20px;
+}
+.quete-box h1{
+    text-align: center;
+    font-weight: 20px;
+    margin-top: 20px;
+}
+.quete-box blockquote{
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 40px;
+    margin-top: 15px;
+}
+.quete-box span{
+    position: relative;
+    top: 45px;
+    left: 250px;
+
+}
+.quete-box h1::after{
+    content: '';
+    width: 125px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65px;
+}
+.quete-box blockquote::before, .quete-box blockquote::after{
+
+    content: '"';
+    font-weight: 40px;
+}
+.quete-box div{
+    display: flex;
+    justify-content: center;
+    
+}
+.quete-box button {
+    width: 100%;
+    background:white;
+    color: black;
+    height: 50px;
+    width: 85px;
+    margin: 5px;
+    border-radius: 20px;
+    border: 1px black solid;
+    transition: 0.5s;
+
+  }
+  .btn img{
+
+    margin: 2px;
+  }
+  
+.quete-box button:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
